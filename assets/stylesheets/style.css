@@ -198,6 +198,16 @@ article img {
   color: #323330;
 }
 
+.box.jquery-box:before {
+  content: "JQUERY";
+  background-color: #0769AD;
+}
+
+.box.git-box:before {
+  content: "GIT";
+  background-color: #f14e32;
+}
+
 .box h1 {
   font-size: 1.5em;
   font-weight: 300;

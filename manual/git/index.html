@@ -1,0 +1,32 @@
+---
+layout: interna
+title: O que é CSS?
+---
+{% include submenu-jquery.html %}
+
+<article class="content">
+  <h1>O que é jQuery?</h1>
+  <p>
+    Sem entrar em considerações teóricas mais profundas e usando uma linguagem despida de caráter técnico, a biblioteca jQuery se resume a um arquivo JavaScript gravado com a típica extensão .js cuja função é simplificar a sintaxe JavaScript.
+  </p>
+
+  <p>
+   Veja dois exemplos de simplificação:
+  </p>
+
+  <pre class="lang-javascript prettyprint linenums">
+    // Sintaxe JavaScript
+    document.getElementsByTagName("p")
+    // Sintaxe jQuery
+    $("p")
+
+    // Sintaxe JavaScript
+    document.getElementById(“um”).setAttribute(“class”, “cor”)
+    // Sintaxe jQuery
+    $("#um").attr("class", "cor")
+  </pre>
+
+  <p>
+   <strong>Alerta</strong>: A sintaxe jQuery é própria, contudo no desenvolvimento com seu uso você pode usar a sintaxe formal JavaScript sempre que necessário. Por exemplo: Não existe uma sintaxe jQuery específica para um pop-up de alerta, mas você pode usar o seu conhecido alert("mensagem de alerta").
+  </p>
+</article>
