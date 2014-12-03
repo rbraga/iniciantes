@@ -1,0 +1,58 @@
+---
+layout: interna
+title: Chaves de Acesso
+---
+{% include submenu-git.html %}
+
+<article class="content">
+	<h1>Chaves de Acesso</h1>
+
+
+	<p>
+		Falta somente configurar as chaves de acesso ao github, para gerar uma chave.
+	</p>
+	<ol>
+		<li>
+			No git-extensions selecione &ldquo;Tools &gt; Putty &gt; Generate or import key&rdquo;.
+			<img height="469" src="/iniciantes/assets/img/git/image06.png">
+		</li>
+		<li>
+			Clique em &ldquo;Generate&rdquo; para gerar uma chave. (Durante a gera&ccedil;&atilde;o, mova o mouse sobre o quadro &ldquo;Key&rdquo;).
+			<img src="/iniciantes/assets/img/git/image56.png">
+		</li>
+		<li>
+			Ap&oacute;s gerar a chave, informe uma senha no campo &ldquo;Key passphrase&rdquo; e sua confirma&ccedil;&atilde;o. Salve a chave privada em &ldquo;Save private key&rdquo;.
+			<img src="/iniciantes/assets/img/git/image44.png">
+		</li>
+		<li>
+			Ainda com a janela com a chave gerada aberta, 
+			copie o conte&uacute;do da chave, ela ser&aacute; utilizada no github. 
+		</li>
+		<li>
+			Acesse o endere&ccedil;o 
+			<a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a>
+
+			&nbsp;e selecione o bot&atilde;o &ldquo;Add SSH key&rdquo;, informe um titulo para a chave, e cole a chave no campo &ldquo;Key&rdquo;.
+			<img src="/iniciantes/assets/img/git/image10.png">
+		</li>
+	</ol>
+	<p>
+		Agora s&oacute; precisamos vincular a chave gerada no PuTTY e j&aacute; configurada na conta do github com o git-extensions. Para fazer isso, vamos clonar um projeto do github.
+	</p>
+	<ol>
+		<li>
+			No git-extensions, selecione &ldquo;Github &gt; Fork/Clone repository&rdquo; e busque o projeto a ser clonado, no nosso caso ser&aacute; o projeto do jquery, ap&oacute;s selecionar o projeto clique no bot&atilde;o &ldquo;Clone&rdquo;.
+			<img src="/iniciantes/assets/img/git/image46.png">
+		</li>
+		<li>
+		Ser&aacute; solicitada uma chave SSH, selecione a op&ccedil;&atilde;o &ldquo;Load SSH key&rdquo; e selecione a chave salva.
+			<img src="/iniciantes/assets/img/git/image41.png">
+		</li>
+		<li>
+			Se foi definida senha para a chave, informe a mesma.
+			<img src="/iniciantes/assets/img/git/image29.png">
+		</li>
+	</ol>
+
+
+</article>

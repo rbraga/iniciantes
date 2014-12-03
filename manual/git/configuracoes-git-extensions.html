@@ -1,0 +1,50 @@
+---
+layout: interna
+title: Configurações iniciais Git Extensions
+---
+{% include submenu-git.html %}
+
+<article class="content">
+<h1>Configurações iniciais Git Extensions</h1>
+	<ol>
+		<li>
+			Abrir o git-extensions e selecionar &ldquo;Tools &gt; Settings&rdquo;. Deve aparecer uma lista com todas as configura&ccedil;&otilde;es b&aacute;sicas para o git-extensions funcionar corretamente. Observando a imagem, s&oacute; falta informar nome de usu&aacute;rio e e-mail, para informa-los clique sobre o bot&atilde;o &ldquo;Repair&rdquo; ao lado do bloco laranja ou &ldquo;Global settings&rdquo; no menu do &nbsp;lado esquerdo.
+			<img src="/iniciantes/assets/img/git/image49.png">
+		</li>
+		<li>
+			Informe o nome de usu&aacute;rio e o e-mail cadastrado no github.
+			<img src="/iniciantes/assets/img/git/image01.png">
+		</li>
+		<li>
+			Selecione &ldquo;SSH&rdquo; no menu ao lado esquerdo, marque a op&ccedil;&atilde;o &ldquo;PuTTY&rdquo;..
+			<img src="/iniciantes/assets/img/git/image14.png">
+		</li>
+		<li>
+			Volte a op&ccedil;&atilde;o &ldquo;Git Extensions&rdquo; no menu do &nbsp;lado esquerdo. Agora a lista de configura&ccedil;&otilde;es deve estar com todos os itens na cor verde.
+			<img src="/iniciantes/assets/img/git/image33.png">
+		</li>
+	</ol>
+	<p>
+		Nota: No Windows 7 e Windows 8, verifique o arquivo .gitconfig na sua pasta de usu&aacute;rio.
+	</p>
+	<p>
+		Para abrir o arquivo, v&aacute; em executar (Win + R) e digite &ldquo;
+	</p>
+<pre class="lang-shell prettyprint linenums">
+%HOMEDRIVE%%HOMEPATH%\.gitconfig
+</pre>
+	<p>
+		Procure a linha com o seguinte conte&uacute;do:
+	</p>
+<pre class="lang-shell prettyprint linenums">
+[credential]
+helper = !\\\&quot;C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\\\&quot;
+</pre>
+	<p>
+		E altere para: 
+	</p>
+<pre class="lang-shell prettyprint linenums">
+[credential]
+helper = !\&quot;C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\&quot;
+</pre>
+</article>

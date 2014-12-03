@@ -1,0 +1,271 @@
+---
+layout: interna
+title: Desenvolvimento
+---
+{% include submenu-git.html %}
+
+<article class="content">
+	<h1>Desenvolvimento</h1>
+	<p></p>
+	<h2>Clonar um Projeto</h2>
+	<p>
+		Abrir o Git-Extensions. Selecionar Clone repository.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image42.png">
+	</p>
+	<p>
+		Informe a Url do reposit&oacute;rio, local onde o arquivo ser&aacute; salvo em sua m&aacute;quina e o nome da pasta onde ser&aacute; salvo o reposit&oacute;rio.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image39.png">
+	</p>
+	<p>
+		Ap&oacute;s clonar o reposit&oacute;rio, ser&aacute; exibida uma mensagem para abrir o reposit&oacute;rio, n&atilde;o &eacute; necess&aacute;rio abrir o projeto agora, vamos abrir o projeto no Visual Studio.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image34.png">
+	</p>
+
+	<h2>
+		Commit Local
+	</h2>
+	<p>
+		Para realizar o commit no branch &ldquo;develop&rdquo;, ap&oacute;s realizar suas altera&ccedil;&otilde;es clique no bot&atilde;o Commit (develop). note que entre par&ecirc;nteses est&aacute; escrito o nome do branch em que estamos trabalhando.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image07.png">
+	</p>
+	<p>
+		Na janela de commit, selecione os arquivos que deseja enviar no commit, e selecione a op&ccedil;&atilde;o desejada.
+	</p>
+	<ul>
+		<li>
+			Commit
+			: Realiza um commit local com os arquivos selecionados.
+		</li>
+		<li>
+			Commit &amp; push:
+			&nbsp;Realiza um commit local e em seguida envia o commit ao reposit&oacute;rio remoto.
+		</li>
+		<li>
+			Reset all changes:
+			&nbsp;Desfaz todas as altera&ccedil;&otilde;es e todos os arquivos alterados, inclusive os que n&atilde;o est&atilde;o selecionados.
+		</li>
+		<li>
+			Amend Commit:
+			&nbsp;O commit ser&aacute; mesclado ao commit anterior, formando um s&oacute; commit, &eacute; ideal ao realizar uma altera&ccedil;&atilde;o, e logo ap&oacute;s mais altera&ccedil;&otilde;es, que deveriam estar no commit anterior.
+		</li>
+	</ul>
+	<p>
+		<img src="/iniciantes/assets/img/git/image30.png">
+	</p>
+	<p>
+		Ap&oacute;s selecionar os arquivos desejados para o commit, clique em 
+		Commit
+		.
+	</p>
+	<p>
+		No commit foi selecionado o Arquivo &ldquo;README.md&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image24.png">
+	</p>
+	<p>
+		Se seu commit for realizado com sucesso, uma janela parecida com essa deve ser exibida.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image04.png">
+	</p>
+	<h2>
+		Atualizar reposit&oacute;rio local (Pull)
+	</h2>
+	<p>
+		Quando precisar atualizar seu reposit&oacute;rio local com o reposit&oacute;rio remoto.
+	</p>
+	<p>
+		Clique sobre o bot&atilde;o &ldquo;Pull&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image45.png">
+	</p>
+	<p>
+		Na janela de Pull, informamos a origem de onde ser&aacute; atualizado nosso reposit&oacute;rio, no nosso caso o origin que &eacute; nosso reposit&oacute;rio remoto, marcamos a primeira op&ccedil;&atilde;o de merge &ldquo;
+		Merge remote branch into current branch
+		&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image47.png">
+	</p>
+	<h2>
+		Enviar commit locais para o reposit&oacute;rio remoto (Push)
+	</h2>
+	<p>
+		Clique sobre o bot&atilde;o &ldquo;Push&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image28.png">
+	</p>
+	<p>
+		Uma janela com as op&ccedil;&otilde;es para pull ser&aacute; mostrada, deixamos o remote no origin, que &eacute; nosso reposit&oacute;rio remoto, e deixamos na aba Push branches, vamos somente atualizar o branch &ldquo;develop&rdquo; remoto com nossas altera&ccedil;&otilde;es e clique em &ldquo;Push&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image40.png">
+	</p>
+	<h2>
+	</h2>
+	<hr style="page-break-before:always;display:none;">
+	<h2>
+	</h2>
+	<h2>
+		Criando novas funcionalidades (Feature)
+	</h2>
+	<p>
+		Para realizar grandes altera&ccedil;&otilde;es no projetos, o ideal &eacute; trabalhar em um branch separado.
+	</p>
+	<p>
+		Vamos criar um branch a partir do branch &ldquo;develop&rdquo;. 
+	</p>
+	<p>
+		Primeiro fa&ccedil;a um checkout no branch &ldquo;develop&rdquo;, v&aacute; em &ldquo;Git &gt; Checkout branch&rdquo;, marque &ldquo;Local branch&rdquo;, selecione &ldquo;develop&rdquo; em &ldquo;Select branch&rdquo; e deixe a op&ccedil;&atilde;o &ldquo;Don&rsquo;t change&rdquo; marcada.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image02.png">
+	</p>
+	<p>
+		Ap&oacute;s o checkout, crie um branch em &ldquo;Git &gt; Create branch&rdquo;, como acabamos de fazer um checkout no branch develop n&atilde;o &eacute; necess&aacute;rio alterar a primeira op&ccedil;&atilde;o. Em &ldquo;Branch name&rdquo; informe um nome para sua nova funcionalidade.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image05.png">
+	</p>
+	<p>
+		Note que agora o bot&atilde;o &ldquo;Commit&rdquo; aparece apontando para o branch da nossa nova funcionalidade, todos os commits ser&atilde;o realizados nesse branch.
+	</p>
+	<p>
+		Ap&oacute;s finalizar sua nova funcionalidade, voc&ecirc; precisa unir ela ao branch de desenvolvimento.
+	</p>
+	<p>
+		Primeiro vamos voltar para o branch de desenvolvimento, fazendo um checkout. Selecione &ldquo;Git &gt; Checkout branch&rdquo; e selecione novamente o branch develop.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image02.png">
+	</p>
+	<p>
+		Agora vamos fazer um merge. Selecione &ldquo;Git &gt; Merge branches&rdquo;. O current branch deve estar no &ldquo;develop&rdquo;, selecione em &ldquo;Merge with&rdquo; o branch da nova funcionalidade, deixe em &ldquo;Keep a single branch line&rdquo; e clique em Merge.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image08.png">
+	</p>
+	<p>
+		Ap&oacute;s o merge, sua nova funcionalidade j&aacute; est&aacute; no branch develop, agora podemos atualizar o reposit&oacute;rio remoto com essa nova funcionalidade, para isso fa&ccedil;a um &ldquo;Pull&rdquo; e um &ldquo;Push&rdquo;.
+	</p>
+	<h2>
+		Corrigir um erro
+	</h2>
+	<p>
+		Em determinados momentos, precisamos realizar uma corre&ccedil;&otilde;es de um erro que est&aacute; na ultima vers&atilde;o, mas como essa vers&atilde;o ser&aacute; lan&ccedil;ada somente para corrigir erros, n&atilde;o vamos fazer essa corre&ccedil;&atilde;o no branch develop, que &eacute; usado para desenvolvimento.
+	</p>
+	<p>
+		Primeiro fa&ccedil;a um checkout no branch remoto &ldquo;master&rdquo;, selecione &ldquo;Git &gt; Checkout branch&rdquo; e selecione o branch &ldquo;origin/master&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image31.png">
+	</p>
+	<p>
+		Crie um branch com o nome do erro a ser corrigido, v&aacute; em &ldquo;Git &gt; Create branch&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image35.png">
+	</p>
+	<p>
+		Ap&oacute;s criar o branch, realize a corre&ccedil;&atilde;o e commit local. Precisamos atualizar o master com essa corre&ccedil;&atilde;o, fa&ccedil;a um checkout no branch master. Selecione &ldquo;Git &gt; Checkout&rdquo; conforme a imagem.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image20.png">
+	</p>
+	<p>
+		Fa&ccedil;a um merge com o branch onde foi corrigido o erro.
+		<img src="/iniciantes/assets/img/git/image25.png">
+	</p>
+	<p>
+		O mesmo tamb&eacute;m necessita ser replicado no ambiente de desenvolvimento. Para isso vamos fazer o mesmo processo no branch develop. Fa&ccedil;a um checkout no branch develop.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image15.png">
+	</p>
+	<p>
+		E em seguida um merge.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image43.png">
+	</p>
+	<p>
+		Para finalizar, o processo fa&ccedil;a um pull e um push no reposit&oacute;rio remoto dos branchs master e develop.
+	</p>
+	<h2>
+		Resolver conflitos
+	</h2>
+	<p>
+		Em alguns casos, durante o desenvolvimento podem ocorrer conflitos. Isso ocorre quando dois desenvolvedores fazem altera&ccedil;&otilde;es na mesma linha de um mesmo arquivo.
+	</p>
+	<p>
+		Vamos supor que o ao enviar minhas altera&ccedil;&otilde;es, o git extensions dever&aacute; mostra uma janela informando que minhas altera&ccedil;&otilde;es foram rejeitadas.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image55.png">
+	</p>
+	<p>
+		Vamos atualizar nosso projeto com um merge escolhendo a terceira op&ccedil;&atilde;o &ldquo;
+		Pull with merge
+		&rdquo;.
+	</p>
+	<p>
+		Ap&oacute;s selecionar a op&ccedil;&atilde;o o git mostra outra janela com as informa&ccedil;&otilde;es, se o merge foi realizado, no nosso caso o arquivo &ldquo;README.md&rdquo; possui conflitos.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image37.png">
+	</p>
+	<p>
+		Clique em OK, e uma janela dever&aacute; perguntar se deseja resolver o conflito, selecione &ldquo;Sim&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image54.png">
+	</p>
+	<p>
+		Na janela selecione o arquivo que deseja resolver o conflito e selecione &ldquo;Open in kdiff3&rdquo;.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image26.png">
+	</p>
+	<p>
+		Ao abrir o Kdiff3, surge uma janela com informa&ccedil;&otilde;es sobre o conflito, ocorreram 4 conflitos, sendo que 3 deles o git j&aacute; resolveu automaticamente.
+	</p>
+	<p>
+		&nbsp;
+		<img src="/iniciantes/assets/img/git/image03.png">
+	</p>
+	<p>
+		O Kdiff3 mostra os 4 conflitos, e j&aacute; vem selecionado o que precisamos resolver, na parte superior existem areas (A,B,C). A area A mostra como a linha estava antes do conflito, e as areas B e C, as altera&ccedil;&otilde;es que foram realizadas. Selecione a que for a melhor solu&ccedil;&atilde;o, se existirem mais conflitos n&atilde;o resolvidos navegue usando as setas ao lado.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image23.png">
+	</p>
+	<p>
+		Ap&oacute;s resolver o conflito, nosso arquivo ficou com dessa forma. Para finalizar, salve e feche o Kdiff3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image18.png">
+	</p>
+	<p>
+		Ap&oacute;s resolver esse conflito vamos realizar um commit.
+	</p>
+	<p>
+		<img src="/iniciantes/assets/img/git/image09.png">
+	</p>
+	<p>
+		E novamente realizamos um pull no reposit&oacute;rio remoto.
+	</p>
+	
+</article>
+
+

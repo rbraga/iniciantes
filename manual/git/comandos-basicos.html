@@ -1,0 +1,96 @@
+---
+layout: interna
+title: Comandos Básicos
+---
+{% include submenu-git.html %}
+
+<article class="content">
+	<h1>Comandos Básicos</h1>
+	<p></p>
+	<h2>
+		Commit
+	</h2>
+	<p>
+		Suponha que voc&ecirc; resolveu um bug no projeto. &Eacute; hora de commitar suas modifica&ccedil;&otilde;es. Essas modifica&ccedil;&otilde;es ser&atilde;o inseridas no hist&oacute;rico do projeto e ficar&atilde;o dispon&iacute;veis para que os outros integrantes da equipe.
+	</p>
+	<p>
+		Ao commitar voc&ecirc; escreve uma descri&ccedil;&atilde;o sobre o que foi feito ali. Assim essa modifica&ccedil;&atilde;o n&atilde;o fica perdida e todo mundo sabe do que se trata aquela mudan&ccedil;a. Voc&ecirc; documenta essa mudan&ccedil;a. &Eacute; mais ou menos isso que &eacute; o commit.
+	</p>
+	<p>
+		Quando voc&ecirc; commita uma modifica&ccedil;&atilde;o, os arquivos editados saem do status staged e voltam para o status unmodified. Claro, por que teoricamente aquela altera&ccedil;&atilde;o j&aacute; foi feita e agora os arquivos voltam com o status de sem modifica&ccedil;&otilde;es.
+	</p>
+	<p>
+		O comando &eacute; este:
+	</p>
+
+<pre class="lang-shell prettyprint linenums">
+git commit -m &quot;Resolvendo bug da modal sobreposta na p&aacute;gina de pagamentos.&quot;
+</pre>
+	
+	</ol>
+	<p>
+		Se voc&ecirc; fizer um 
+		git log
+		&nbsp;no projeto, voc&ecirc; consegue visualizar uma lista de todos os commits enviados para o projeto, seus commits e commits de outros integrantes. Veja abaixo:
+	</p>
+	<h2>
+		Pull
+	</h2>
+	<p>
+		N&atilde;o &eacute; s&oacute; voc&ecirc; que est&aacute; fazendo modifica&ccedil;&otilde;es nos arquivos, mas tamb&eacute;m sua equipe. Por isso &eacute; importante que voc&ecirc; deixe o projeto sempre atualizado. Para isso voc&ecirc; precisa trazer as modifica&ccedil;&otilde;es que eles fizeram e commitaram para o seu reposit&oacute;rio local. Voc&ecirc; vai usar o comando 
+		pull
+		&nbsp;para trazer essas modifica&ccedil;&otilde;es:
+	</p>
+
+<pre class="lang-shell prettyprint linenums">
+git pull
+</pre>
+			
+	<p>
+		Feito isso vai at&eacute; o servidor buscar todas as modifica&ccedil;&otilde;es a partir da vers&atilde;o do seu reposit&oacute;rio local, ele vai baixar essas modifica&ccedil;&otilde;es e far&aacute; um merge autom&aacute;tico nos arquivos necess&aacute;rios que foram modificados. Coisa linda&hellip; algu&eacute;m deve ter modificado o mesmo arquivo que voc&ecirc;, o Git vai entender isso e vai juntar seu c&oacute;digo com o dele, automaticamente&hellip; Claro que pode ser que de conflitos caso voc&ecirc;s tenham modificado a mesma linha, mas a&iacute; &eacute; outra hist&oacute;ria, vemos mais pra frente como resolver isso. Se quiser se adiantar, procure sobre o comando 
+		diff
+		.
+	</p>
+	<h2>
+		Push
+	</h2>
+	<p>
+		Voc&ecirc; modificou os arquivos, commitou descrevendo o que fez exatamente naquela modifica&ccedil;&atilde;o e agora precisa enviar tudo isso para o servidor. O comando 
+		git push
+		&nbsp;empurra as suas modifica&ccedil;&otilde;es para o servidor, incluido-as no hist&oacute;rico do projeto. Quando os outros integrantes da equipe fizerem um 
+		git pull
+		, essas modifica&ccedil;&otilde;es ser&atilde;o baixadas e inclu&iacute;das no reposit&oacute;rio local da pessoa.
+	</p>
+<pre class="lang-shell prettyprint linenums">
+git push
+</pre>
+	<p>
+		O Git Push s&oacute; pode ser feito se voc&ecirc; executou o 
+		git pull
+		&nbsp;antes. Isso &eacute; uma forma de voc&ecirc; ter o seu reposit&oacute;rio atualizado e tamb&eacute;m para evitar poss&iacute;veis conflitos no projeto. Quando voc&ecirc; faz o pull, se der algum conflito de c&oacute;digo, voc&ecirc; dever&aacute; resolve-los para depois enviar o novo c&oacute;digo novamente.
+	</p>
+	<p>
+		H&aacute; algumas outras op&ccedil;&otilde;es tanto no Pull e no Push que podemos utilizar para especificar o branch para onde iremos empurrar ou buscar atualiza&ccedil;&otilde;es. Mas isso fica para outra hora.
+	</p>
+	<p>
+		A 
+		
+		<a href="http://git-scm.com/docs">documenta&ccedil;&atilde;o do Git</a>
+		
+		&nbsp;&eacute; muito f&aacute;cil de ler e entender. 
+	</p>
+	<h2>
+		Stash
+	</h2>
+	<p>
+		Muitas vezes, quando voc&ecirc; est&aacute; trabalhando em uma parte do seu projeto, as coisas est&atilde;o em um estado confuso e voc&ecirc; quer mudar de branch por um tempo para trabalhar em outra coisa. O problema &eacute;, voc&ecirc; n&atilde;o quer fazer o commit de um trabalho incompleto somente para voltar a ele mais tarde. A resposta para esse problema &eacute; o comando 
+		git stash
+		.
+	</p>
+	<p>
+		Fazer Stash &eacute; tirar o estado sujo do seu diret&oacute;rio de trabalho &mdash; isto &eacute;, seus arquivos modificados que est&atilde;o sendo rastreados e mudan&ccedil;as na &aacute;rea de sele&ccedil;&atilde;o &mdash; e o salva em uma pilha de modifica&ccedil;&otilde;es inacabadas que voc&ecirc; pode voltar a qualquer momento.
+	</p>
+
+</article>
+
+
